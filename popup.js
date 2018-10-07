@@ -1,12 +1,16 @@
-let clearAll = document.getElementById('clearAll');
-let output = document.getElementById('output')
+let confirm = document.getElementById('confirm');
+let data = document.getElementById('data');
+let prompt = document.getElementById('prompt');
 
-clearAll.onclick = function() {  
+confirm.onclick = function() {  
     var callback = function() {
         data.style.color = "green";
         data.innerHTML = "CLEARED";
     };
 
+    data.style.color = "black";
+    data.innerHTML = "WORKING...";
+    
     chrome.browsingData.remove({
         // '0' removes all browsing data.
         "since": 0

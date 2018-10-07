@@ -1,0 +1,27 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+button {
+    margin: 13px 35px 12px 35px;
+    background-color: #379683;
+    border: none;
+    color: white;
+    padding: 9px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+button:hover {
+    background-color: #5cdb95;
+}
+.center {
+    text-align: center;
+}
+#data {
+    color: red;
+    font-weight: bold;
+}
+#prompt {
+    font-weight: bold;
+}
