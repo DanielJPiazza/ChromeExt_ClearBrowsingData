@@ -1,11 +1,10 @@
 let clearAll = document.getElementById('clearAll');
 let output = document.getElementById('output')
 
-clearAll.onclick = function() {
-    output.innerHTML = "";
-    
+clearAll.onclick = function() {  
     var callback = function() {
-        output.innerHTML = "Browsing data cleared."
+        data.style.color = "green";
+        data.innerHTML = "CLEARED";
     };
 
     chrome.browsingData.remove({
