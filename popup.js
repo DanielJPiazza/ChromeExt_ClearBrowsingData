@@ -1,7 +1,11 @@
-// Called when the user clicks on the browser action.
-chrome.browserAction.onClicked.addListener(function() {
+let clearAll = document.getElementById('clearAll');
+let output = document.getElementById('output')
+
+clearAll.onclick = function() {
+    output.innerHTML = "";
+    
     var callback = function() {
-        alert("All browsing data has been deleted.");
+        output.innerHTML = "Browsing data cleared."
     };
 
     chrome.browsingData.remove({
@@ -21,4 +25,4 @@ chrome.browserAction.onClicked.addListener(function() {
         "passwords": true,
         "webSQL": true
     }, callback);
-  });
+}
